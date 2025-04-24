@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+:root {
+  --background: oklch(1 0 0);
+  --green: #10B981;
+  --yellow: #CA8A04;
+}
+
+@layer base {
+  body {
+    @apply text-neutral-900;
+  }
+}
