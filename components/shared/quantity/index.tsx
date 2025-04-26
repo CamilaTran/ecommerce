@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import SubtractIcon from '@/components/icons/subtract-icon';
 import PlusIcon from '@/components/icons/plus-icon';
 
+const MIN_QUANTITY = 1
+
 const Quantity = () => {
   const [count, setCounter] = useState<number>(1);
 
@@ -22,11 +24,11 @@ const Quantity = () => {
         <Button
           onClick={decreament}
           variant="ghost"
-          disabled={count === 0}
+          disabled={count === MIN_QUANTITY}
           className="!p-0 w-5"
           size="icon"
         >
-          <SubtractIcon />
+          <SubtractIcon color={count === MIN_QUANTITY ? "#A3A3A3" : "#525252"} />
         </Button>
         <p className="text-neutral-600 font-medium text-sm w-[50px] text-center">
           {count}
@@ -37,7 +39,7 @@ const Quantity = () => {
           className="!p-0 w-5 h-5"
           size="icon"
         >
-          <PlusIcon />
+          <PlusIcon color={count === 10 ? "#A3A3A3" : "#525252"} />
         </Button>
       </div>
     </div>
