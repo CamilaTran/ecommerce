@@ -26,7 +26,7 @@ const SIZES = [
 const Size = () => {
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-neutral-500 text-sm">Available Colors</p>
+      <p className="text-neutral-500 text-sm">Available Sizes</p>
 
       <ToggleGroup type="single" className="flex gap-4">
         {SIZES.map(i => (
