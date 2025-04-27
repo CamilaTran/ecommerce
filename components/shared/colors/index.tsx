@@ -1,4 +1,3 @@
-'use client';
 import { useAppStore } from '@/store';
 import Color from '../color';
 
