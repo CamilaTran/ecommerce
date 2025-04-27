@@ -1,4 +1,5 @@
 import CheckedIcon from '@/components/icons/checked-icon';
+import { useAppStore } from '@/store';
 
 interface ColorProps {
   color: string;
@@ -7,8 +8,11 @@ interface ColorProps {
 }
 
 const Color = ({ color, isSelect = false, isOFS = false }: ColorProps) => {
+  const { setSelected } = useAppStore(state => state.product);
+
   return (
     <div
+      onClick={() => setSelected({ color })}
       className={`relative cursor-pointer w-[38px] h-[38px] rounded-full  flex items-center justify-center ${isSelect ? 'border-indigo-700 border-1' : `hover:border hover:border-[2.33px] hover:border-[#C7D2FE] bg-${color}`}`}
     >
       {isSelect && (
