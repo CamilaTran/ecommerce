@@ -1,4 +1,5 @@
 import ProductCard from '@/components/collections/product-card';
+import { Button } from '@/components/ui/button';
 import { ProductsServices } from '@/services/product-services';
 import { Product } from '@/types/product.types';
 
@@ -10,9 +11,9 @@ export default async function Page() {
       <div className="flex flex-col gap-8">
         <div className="flex justify-between items-center">
           <h3 className="font-semibold text-3xl">Latest Arrivals</h3>
-          <button className="border border-[0.5px] border-neutral-200 rounded-sm py-[10px] px-[18px] shadow font-medium">
+          <Button className="hadow-btn" size="sm" variant="destructive">
             View all
-          </button>
+          </Button>
         </div>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 justify-center">
           {data.data.length &&
