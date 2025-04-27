@@ -13,10 +13,14 @@ const Color = ({ color, isSelect = false, isOFS = false }: ColorProps) => {
   return (
     <div
       onClick={() => setSelected({ color })}
-      className={`relative cursor-pointer w-[38px] h-[38px] rounded-full  flex items-center justify-center ${isSelect ? 'border-indigo-700 border-1' : `hover:border hover:border-[2.33px] hover:border-[#C7D2FE] bg-${color}`}`}
+      style={{ background: color }}
+      className={`relative cursor-pointer w-[38px] h-[38px] rounded-full  flex items-center justify-center ${isSelect ? 'border-indigo-700 border-1' : `hover:border hover:border-[2.33px] hover:border-[#C7D2FE]`}`}
     >
       {isSelect && (
-        <div className={`w-8 h-8 rounded-full bg-${color} relative`}>
+        <div
+          className={`w-8 h-8 rounded-full relative`}
+          style={{ background: color }}
+        >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <CheckedIcon />
           </div>

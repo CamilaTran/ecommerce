@@ -11,14 +11,6 @@
   }
 }
 
-.bg-green {
-  background-color: #10b981;
-}
-
-.bg-brown {
-  background-color: #ca8a04;
-}
-
 .hidden-scrollbar {
   overflow: scroll;
   -ms-overflow-style: none;
